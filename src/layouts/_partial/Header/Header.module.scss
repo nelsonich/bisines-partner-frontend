@@ -1,0 +1,95 @@
+@import '../../../assets/styles/variables';
+@import '../../../assets/styles/mixins';
+
+.header-box {
+  background-color: #fff0 !important;
+}
+
+.menu-item-box {
+  width: 100%;
+
+  a {
+    font-size: 15px !important;
+    color: #6c6c6c;
+    margin-left: 20px;
+
+    @include responsive-tablet {
+      font-size: 14px !important;
+    }
+
+    &:hover {
+      color: $color-primary;
+      list-style: armenian !important;
+      transition: 0.5s;
+    }
+  }
+}
+
+.active-link {
+  color: $color-tertiary !important;
+}
+.active-link::before {
+  content: '\273C';
+  padding-right: 5px;
+}
+.header-scroll-bar-open {
+  position: fixed;
+  width: 100%;
+  min-height: 80px;
+  background-color: #ffffff !important;
+  top: 0;
+  left: 0;
+  z-index: 9;
+  animation-name: anime;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  justify-content: space-around !important;
+  @include flex-center();
+}
+
+@keyframes anime {
+  0% {
+    top: -200px;
+  }
+  100% {
+    top: 0;
+    @include box-shadow(2px 9px 30px -8px rgba(0, 0, 0, 0.15));
+  }
+}
+
+.nav-link {
+  padding-left: 0 !important;
+}
+
+.btn-top-bor {
+  margin-left: 15px;
+
+  button {
+    @include responsive-mobile {
+      width: 140px !important;
+      padding: 0;
+      a {
+        font-size: 8px !important;
+      }
+    }
+  }
+  a {
+    font-size: 9px;
+    font-weight: 400;
+    color: $color-white;
+    &:hover {
+      color: #989491;
+    }
+  }
+}
+.btn-top-bor {
+  button {
+    a {
+      font-size: 13px;
+    }
+
+    @include responsive-mobile {
+      height: 43px !important;
+    }
+  }
+}

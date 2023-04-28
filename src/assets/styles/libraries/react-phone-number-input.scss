@@ -1,0 +1,50 @@
+:root {
+  --PhoneInputCountrySelect-marginRight: 0.75rem;
+  --PhoneInput-color--focus: #363636;
+  --PhoneInputInternationalIconGlobe-opacity: 1;
+
+  // --PhoneInput-color--focus: #03b2cb;
+  // --PhoneInputInternationalIconPhone-opacity: 0.8;
+  // --PhoneInputInternationalIconGlobe-opacity: 0.65;
+  // --PhoneInputCountrySelect-marginRight: 0.35em;
+  // --PhoneInputCountrySelectArrow-width: 0.3em;
+  // --PhoneInputCountrySelectArrow-marginLeft: var(--PhoneInputCountrySelect-marginRight);
+  // --PhoneInputCountrySelectArrow-borderWidth: 1px;
+  // --PhoneInputCountrySelectArrow-opacity: 0.45;
+  // --PhoneInputCountrySelectArrow-color: currentColor;
+  // --PhoneInputCountrySelectArrow-color--focus: var(--PhoneInput-color--focus);
+  // --PhoneInputCountrySelectArrow-transform: rotate(45deg);
+  // --PhoneInputCountryFlag-aspectRatio: 1.5;
+  // --PhoneInputCountryFlag-height: 1em;
+  // --PhoneInputCountryFlag-borderWidth: 1px;
+  // --PhoneInputCountryFlag-borderColor: rgba(0,0,0,0.5);
+  // --PhoneInputCountryFlag-borderColor--focus: var(--PhoneInput-color--focus);
+  // --PhoneInputCountryFlag-backgroundColor--loading: rgba(0,0,0,0.1);
+}
+
+@import '~react-phone-number-input/style.css';
+
+.PhoneInputCountrySelect {
+  option {
+    padding: 0.375rem 0.75rem;
+  }
+}
+
+.PhoneInputInput {
+  display: block;
+  width: 100%;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 0.375rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  outline: none;
+}

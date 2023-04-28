@@ -1,0 +1,82 @@
+@import '../../../../assets/styles/mixins';
+@import '../../../../assets/styles/variables';
+
+.card-box {
+  width: 16rem;
+  height: 240px;
+  margin-top: 50px;
+  margin-bottom: 120px;
+
+  @include background-position-center();
+  @include animation-cards();
+
+  @include responsive-mobile {
+    width: 300px;
+  }
+
+  @include responsive-tablet {
+    width: 300px;
+  }
+}
+
+.responsive-card {
+  @include responsive-tablet {
+    margin: 3px;
+  }
+}
+
+.position-big-box {
+  position: relative;
+}
+
+.box-position {
+  width: 15rem;
+  height: 160px;
+  background-color: $color-white;
+  position: absolute;
+  top: 13rem;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Oswald;
+
+  h4 {
+    color: $color-black;
+    text-decoration: none;
+    font-size: 14px;
+  }
+
+  p {
+    font-size: 14px;
+    color: $color-black;
+    span {
+      color: $color-primary;
+    }
+  }
+
+  @include responsive-mobile {
+    width: 17rem;
+  }
+
+  @include responsive-tablet {
+    width: 17rem;
+  }
+}
+
+.big-box-products {
+  min-height: 500px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-bottom: 100px;
+
+  @include responsive-tablet {
+    justify-content: center !important;
+  }
+
+  @include responsive-mobile {
+    justify-content: center !important;
+  }
+}

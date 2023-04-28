@@ -1,0 +1,105 @@
+@import '../../../assets/styles/variables';
+@import '../../../assets/styles/mixins';
+
+.top-bar {
+  width: 100%;
+  min-height: 100px;
+  border-bottom: 1px solid #e2dfdd;
+  background-color: #fff0 !important;
+}
+
+.location-links {
+  width: 100%;
+  @include responsive-mobile {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  a {
+    img {
+      @include responsive-mobile {
+        // width: 50px !important;
+      }
+    }
+  }
+}
+
+.btn-top-bor {
+  a {
+    font-size: 9px;
+    font-weight: 400;
+    color: $color-white;
+    &:hover {
+      color: #989491;
+    }
+  }
+}
+
+.big-box-links {
+  > div {
+    margin: 10px 0;
+  }
+}
+
+.container-top-bar {
+  @include responsive-tablet() {
+    flex-direction: column !important;
+  }
+  @include responsive-mobile() {
+    flex-direction: column !important;
+  }
+}
+
+.btn-top-bor {
+  button {
+    a {
+      font-size: 13px;
+    }
+  }
+}
+
+.top-bar-links-items {
+  display: flex;
+  align-items: center;
+  > div {
+    > div {
+      justify-content: flex-start !important;
+    }
+    @include responsive-mobile {
+      width: unset;
+    }
+  }
+  a {
+    margin: 0 5px;
+    @include responsive-mobile {
+      margin-right: 5px;
+      margin-left: 0;
+    }
+  }
+}
+.top-bar-responsive-icons {
+  width: 100%;
+
+  @include responsive-desktop {
+    justify-content: flex-end !important;
+  }
+}
+
+.icon-left {
+  display: flex;
+
+  @include responsive-mobile {
+    margin-left: 5px;
+  }
+}
+
+.logo-block {
+  width: 130px;
+
+  @include responsive-mobile {
+    width: 65px;
+  }
+
+  .logo {
+  }
+}

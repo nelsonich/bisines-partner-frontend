@@ -1,0 +1,149 @@
+@use 'sass:math';
+@use 'sass:map';
+
+// colors
+$color-white: #ffffff;
+$color-black: #010103;
+$color-gray-dark: #32323d;
+$color-gray-light: #8a8a94;
+
+$color-green: #cdde6b;
+$color-green-dark: #404525;
+$color-cyan: #55d7dc;
+$color-bg-dark: #0c1600;
+$color-bg-light: #1d1f14;
+$color-bg-dark-nav: #0d1700;
+$color-text-p: #c7c7c7;
+//colors Button
+$color-button: #c7a17a;
+$button-layer: #010103;
+// spacing
+$space-default: 15px;
+$space-text: 5px;
+$color-warning: #dc3546;
+
+// border radius
+$border-radius: 7px;
+
+// layer colors
+$color-layer: #0000001d;
+$color-primary: #f3c671;
+$color-secondary: #ffebc6;
+$color-tertiary: #c59948;
+$color-quaternary: #755e34;
+$color-quinary: #49391b;
+$color-senary: #000000;
+$color-septenary: #000000;
+$color-octonary: #000000;
+$color-nonary: #000000;
+$color-denary: #000000;
+
+$color-primary-transparent: #8e7992;
+$color-primary-transparent-50: #ffffff;
+$color-pre-loader: #6c626e;
+
+// animation
+$animation-duration: 0.35s;
+$animation-style: ease-in-out;
+
+// responsive sizes
+$responsive-sizes: (
+  xxs: (
+    min: 0,
+    max: 375px,
+  ),
+  xs: (
+    min: 376px,
+    max: 575px,
+  ),
+  sm: (
+    min: 576px,
+    max: 767px,
+  ),
+  md: (
+    min: 768px,
+    max: 991px,
+  ),
+  lg: (
+    min: 992px,
+    max: 1199px,
+  ),
+  xl: (
+    min: 1200px,
+    max: 1449px,
+  ),
+  xxl: (
+    min: 1450px,
+    max: 600000000px,
+  ),
+);
+
+// screens
+$screen-mobile-min-name: 'xxs';
+$screen-mobile-max-name: 'sm';
+$screen-mobile-min-value: map.get(
+  map.get($responsive-sizes, $screen-mobile-min-name),
+  'min'
+);
+$screen-mobile-max-value: map.get(
+  map.get($responsive-sizes, $screen-mobile-max-name),
+  'max'
+);
+$screen-mobile: (
+  min: (
+    value: $screen-mobile-min-value,
+    // 0
+    name: $screen-mobile-min-name,
+  ),
+  max: (
+    value: $screen-mobile-max-value,
+    // 767px
+    name: $screen-mobile-max-name,
+  ),
+);
+
+$screen-tablet-min-name: 'md';
+$screen-tablet-max-name: 'lg';
+$screen-tablet-min-value: map.get(
+  map.get($responsive-sizes, $screen-tablet-min-name),
+  'min'
+);
+$screen-tablet-max-value: map.get(
+  map.get($responsive-sizes, $screen-tablet-max-name),
+  'max'
+);
+$screen-tablet: (
+  min: (
+    value: $screen-tablet-min-value,
+    // 768px
+    name: $screen-tablet-min-name,
+  ),
+  max: (
+    value: $screen-tablet-max-value,
+    // 1199px
+    name: $screen-tablet-max-name,
+  ),
+);
+
+$screen-desktop-min-name: 'xl';
+$screen-desktop-max-name: 'xxl';
+$screen-desktop-min-value: map.get(
+  map.get($responsive-sizes, $screen-desktop-min-name),
+  'min'
+);
+$screen-desktop-max-value: map.get(
+  map.get($responsive-sizes, $screen-desktop-max-name),
+  'max'
+);
+$screen-desktop: (
+  min: (
+    value: $screen-desktop-min-value,
+    // 1200px
+    name: $screen-desktop-min-name,
+  ),
+  max: (
+    value: $screen-desktop-max-value,
+    // infinity
+    name: $screen-desktop-max-name,
+  ),
+);

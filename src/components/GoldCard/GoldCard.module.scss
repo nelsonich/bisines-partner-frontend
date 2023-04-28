@@ -1,0 +1,13 @@
+@import '../../assets/styles/variables';
+@import '../../assets/styles/mixins';
+
+.gold-box {
+  color: #ffffff;
+  background-color: $color-primary;
+  font-size: 12px;
+  text-transform: uppercase;
+  padding: 5px;
+  border-radius: 3px;
+  text-align: center;
+  cursor: default !important;
+}

@@ -1,0 +1,144 @@
+@import '../../assets/styles/mixins';
+@import '../../assets/styles/variables';
+
+.left-box-background-image {
+  width: 100%;
+  min-height: 400px;
+  border-radius: $border-radius;
+  @include background-position-center();
+
+  @include responsive-mobile {
+    height: 400px;
+  }
+}
+
+.border-styles {
+  border: none !important;
+}
+
+.product-code-design {
+  color: $color-black !important;
+}
+.icons-styles {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.icon-heart {
+  font-size: 60px;
+  color: $color-primary;
+  @include responsive-mobile {
+    font-size: 30px;
+  }
+}
+
+.border-icons {
+  width: 1px;
+  height: 50px;
+  background-color: $color-primary;
+  @include responsive-mobile {
+    height: 35px;
+  }
+}
+.title-view-product {
+  h2 {
+    font-weight: bold;
+    font-size: 35px;
+    @include responsive-mobile() {
+      font-size: 19px !important;
+      margin-top: 30px;
+      text-align: center;
+    }
+    @include responsive-tablet() {
+      font-size: 19px !important;
+      margin-top: 100px;
+    }
+  }
+}
+
+.social-link {
+  a {
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    border-radius: 4px;
+    font-size: 13px;
+    border: 1px solid #dfdada;
+    text-align: center;
+    line-height: 27px;
+    color: #808080;
+    text-decoration: none;
+    margin: 0 5px;
+    &:hover {
+      border-color: #999999;
+      color: #000;
+      border-color: #171616;
+      transition: 0.4s;
+    }
+  }
+  @include responsive-tablet() {
+    margin: 20px;
+  }
+  @include responsive-mobile() {
+    margin: 0;
+  }
+}
+
+.responsive-product-view-code {
+  @include responsive-mobile {
+    font-size: 15px !important;
+    text-align: center !important;
+    margin: 5px 0 !important;
+  }
+}
+.responsive-view-price {
+  @include responsive-mobile {
+    text-align: center !important;
+    font-size: 17px !important;
+    margin-bottom: 0 !important;
+  }
+}
+.responsive-view-calc {
+  input {
+    width: 38px;
+  }
+
+  @include responsive-mobile {
+    display: flex;
+    justify-content: center;
+    > div {
+      height: 40px;
+
+      > div {
+        margin: 0 !important;
+      }
+    }
+    button {
+      padding: 0;
+      width: 25px;
+      height: 25px;
+    }
+    input {
+      width: 25px;
+      font-size: 14px !important;
+    }
+  }
+}
+
+.style-button-cart {
+  @include responsive-mobile {
+    button {
+      width: 125px !important;
+      height: 40px !important;
+      display: flex;
+      align-items: center;
+      font-size: 7px !important;
+      margin-right: 3px;
+    }
+  }
+}

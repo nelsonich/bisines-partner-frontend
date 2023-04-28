@@ -1,0 +1,23 @@
+@import '../../../../assets/styles/mixins';
+@import '../../../../assets/styles/variables';
+
+.inputs {
+  width: 25px;
+  height: 25px;
+}
+
+.box-payment {
+  label,
+  input {
+    cursor: pointer;
+  }
+}
+
+.label-payment {
+  @include responsive-tablet {
+    font-size: 11px;
+  }
+  @include responsive-mobile {
+    font-size: 11px;
+  }
+}

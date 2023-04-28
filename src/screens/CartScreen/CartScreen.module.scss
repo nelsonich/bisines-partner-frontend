@@ -1,0 +1,9 @@
+@import '../../assets/styles/mixins';
+@import '../../assets/styles/variables';
+
+.table-box {
+  td,
+  th {
+    padding: 25px;
+  }
+}

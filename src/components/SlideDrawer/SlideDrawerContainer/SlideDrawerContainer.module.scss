@@ -1,0 +1,119 @@
+@import '../../../assets/styles/variables';
+@import '../../../assets/styles/mixins';
+
+.slide-drawer-container {
+  background-color: rgba(#000000, 0.3);
+  position: fixed;
+  z-index: 999999;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  display: flex;
+
+  .slide-drawer-empty,
+  .slide-drawer-content {
+    height: 100%;
+  }
+
+  .slide-drawer-empty {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+
+    @include responsive-mobile {
+      width: 0 !important;
+    }
+  }
+
+  .slide-drawer-content {
+    background-color: rgba($color: $color-white, $alpha: 0.9);
+    position: fixed;
+    z-index: 9999999;
+    top: 0;
+    height: 100vh;
+    padding: #{$space-default * 3} #{$space-default * 2};
+    overflow: auto;
+
+    @include responsive-mobile {
+      width: 100% !important;
+    }
+
+    // * {
+    //   color: $color-white;
+    // }
+
+    .slide-drawer-content-header {
+      margin-bottom: 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+
+      .slide-drawer-header-title {
+        font-family: 'Gilroy-Regular';
+        font-size: 25px;
+        line-height: 25px;
+        font-weight: bold;
+      }
+
+      .slide-drawer-header-close {
+        cursor: pointer;
+
+        i {
+          color: $color-black;
+          font-size: 25px;
+          @include transition(color $animation-duration);
+
+          &:hover {
+            color: $color-secondary;
+          }
+        }
+      }
+    }
+  }
+
+  // direction left-to-right
+  &.slide-drawer-direction-left-to-right {
+    left: -100vw;
+    @include transition(left 0.4s);
+
+    .slide-drawer-empty {
+      right: 0;
+    }
+
+    &.slide-drawer-container-opened {
+      left: 0 !important;
+    }
+
+    .slide-drawer-content {
+      left: -100vw;
+      @include transition(left 0.4s);
+
+      &.slide-drawer-content-opened {
+        left: 0 !important;
+      }
+    }
+  }
+
+  // direction right-to-left
+  &.slide-drawer-direction-right-to-left {
+    right: -100vw;
+    @include transition(right 0.4s);
+
+    .slide-drawer-empty {
+      left: 0;
+    }
+
+    &.slide-drawer-container-opened {
+      right: 0 !important;
+    }
+
+    .slide-drawer-content {
+      right: -100vw;
+      @include transition(right 0.4s);
+
+      &.slide-drawer-content-opened {
+        right: 0 !important;
+      }
+    }
+  }
+}

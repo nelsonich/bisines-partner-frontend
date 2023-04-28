@@ -1,0 +1,97 @@
+extends:
+- stylelint-config-standard
+- stylelint-config-standard-scss
+- stylelint-config-prettier-scss
+- stylelint-prettier/recommended
+
+cache: false
+
+plugins:
+- stylelint-prettier
+
+ignoreFiles:
+- src/**/*.js
+- src/**/*.js
+- src/**/*.jsx
+- src/**/*.ts
+- src/**/*.tsx
+
+rules:
+  unit-allowed-list:
+  - px
+  - pt
+  - pc
+  - em
+  - rem
+  - "%"
+  - s
+  - ms
+  - vh
+  - vw
+  - deg
+
+  color-no-invalid-hex: true
+  selector-pseudo-class-no-unknown:
+  - true
+  - ignorePseudoClasses:
+    - global
+
+  value-keyword-case: lower
+  function-name-case: lower
+  selector-type-case: lower
+  color-hex-case: lower
+  unit-case: lower
+  property-case: lower
+  at-rule-name-case: lower
+  indentation: 2
+  linebreaks: unix
+  no-empty-first-line: true
+  color-hex-length: long
+
+  string-quotes: single
+  font-family-name-quotes: always-unless-keyword
+  font-family-no-missing-generic-family-keyword: null
+  function-url-quotes: always
+  selector-attribute-quotes: always
+
+  function-parentheses-space-inside: never-single-line
+
+  selector-class-pattern: "^([a-z][a-z0-9]*)(-[a-z0-9]+)*$"
+  selector-id-pattern: "^([a-z][a-z0-9]*)(-[a-z0-9]+)*$"
+  custom-property-pattern: "^([a-z][a-z0-9]*)(-[a-z0-9]+)*$"
+  keyframes-name-pattern: "^([a-z][a-z0-9]*)(-[a-z0-9]+)*$"
+
+  import-notation: null
+  block-no-empty: null
+  number-max-precision: null
+  no-descending-specificity: null
+  shorthand-property-no-redundant-values: null
+
+  property-no-vendor-prefix: true
+  at-rule-no-vendor-prefix:
+  - true
+  - ignoreValues:
+    - "@-webkit-"
+    - "@-khtml-"
+    - "@-moz-"
+    - "@-ms-"
+    - "@-o-"
+
+  scss/double-slash-comment-empty-line-before: always
+  scss/dollar-variable-empty-line-before: null
+
+  # scss/at-function-pattern:
+  # - "^([_|-]*[a-z][a-z0-9]*)(-[a-z0-9]+)*-*$"
+  # - message: Expected function to be kebab-case
+  # scss/at-mixin-pattern:
+  # - "^([_|-]*[a-z][a-z0-9]*)(-[a-z0-9]+)*-*$"
+  # - message: Expected mixin to be kebab-case
+  # scss/at-rule-conditional-no-parentheses:
+  # scss/dollar-variable-pattern:
+  # - "^([_|-]*[a-z][a-z0-9]*)(-[a-z0-9]+)*-*$"
+  # - message: Expected variable to be kebab-case
+
+# kebab-case: ^([a-z][a-z0-9]*)(-[a-z0-9]+)*$
+# lowerCamelCase: ^[a-z][a-zA-Z0-9]+$
+# snake_case: ^([a-z][a-z0-9]*)(_[a-z0-9]+)*$
+# UpperCamelCase: ^[A-Z][a-zA-Z0-9]+$

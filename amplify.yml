@@ -1,0 +1,30 @@
+version: 1
+
+frontend:
+  phases:
+    preBuild:
+      commands:
+        - echo "⚙️ Exporting environment variables ..."
+        - cp .env.example .env
+        - sed "s|^NEXT_PUBLIC_API=.*$|NEXT_PUBLIC_API=\"${NEXT_PUBLIC_API}\"|g" -i .env
+        - echo "📦 Installing node modules ..."
+        - npm install
+    build:
+      commands:
+        - echo "🔨 Building project ..."
+        - npm run build
+
+    # postBuild:
+    #   commands:
+    #     - echo "💫 Cleaning up ..."
+    #     - npm run cleanup
+
+  artifacts:
+    baseDirectory: .next
+    files:
+      - '**/*'
+
+  # cache:
+  #   paths:
+  #     - node_modules/**/*
+  #     - .next/**/*

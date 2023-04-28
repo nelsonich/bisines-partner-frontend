@@ -1,0 +1,52 @@
+@import '../../../../assets/styles/mixins';
+@import '../../../../assets/styles/variables';
+
+.button-user-icon {
+  padding: 5px 7px;
+  background-color: $color-primary;
+  border-radius: $border-radius;
+  @include flex-center;
+
+  &::after {
+    color: $color-black;
+    font-size: 15px;
+
+    @include responsive-mobile {
+      font-size: 11px;
+    }
+  }
+}
+
+.drop-menu-position {
+  left: -10px !important;
+
+  @include responsive-mobile {
+    left: -55px !important;
+  }
+
+  li {
+    a {
+      color: #6c6c6c;
+      font-size: 15px;
+    }
+
+    button {
+      color: #6c6c6c;
+      font-size: 15px;
+    }
+  }
+}
+
+.hr-design {
+  border-color: $color-primary;
+}
+
+.my-name-user-menu {
+  font-size: 14px;
+  font-weight: bold;
+  color: $color-black;
+
+  @include responsive-mobile {
+    font-size: 12px;
+  }
+}

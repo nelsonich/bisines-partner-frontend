@@ -1,0 +1,20 @@
+@import '../../assets/styles/mixins';
+@import '../../assets/styles/variables';
+
+.checkout-box {
+  width: 100%;
+  min-height: 900px;
+  background-color: $color-white;
+}
+
+.table-padding {
+  table {
+    td,
+    th {
+      padding: 10px;
+      @include responsive-mobile {
+        padding: 5px;
+      }
+    }
+  }
+}

@@ -1,0 +1,13 @@
+@import '../../assets/styles/mixins';
+@import '../../assets/styles/variables';
+
+.cabinet-header {
+  margin-bottom: 10px;
+
+  .info {
+    h6 {
+      user-select: none;
+      opacity: 0.7;
+    }
+  }
+}

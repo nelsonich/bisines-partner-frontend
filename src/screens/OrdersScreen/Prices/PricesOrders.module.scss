@@ -1,0 +1,9 @@
+@import '../../../assets/styles/mixins';
+@import '../../../assets/styles/variables';
+
+.thead-fs {
+  background-color: $color-primary-transparent-50;
+  th {
+    font-family: MontserratBold;
+  }
+}

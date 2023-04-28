@@ -1,0 +1,13 @@
+@import 'scss/webfonts';
+
+@font-face {
+  font-family: 'flaticon';
+  src: url('./webfonts/flaticon.ttf') format('truetype'),
+    url('./webfonts/flaticon.woff') format('woff'),
+    url('./webfonts/flaticon.woff2') format('woff2'),
+    url('./webfonts/flaticon.svg') format('svg');
+}
+
+.flaticon {
+  font-family: 'flaticon';
+}

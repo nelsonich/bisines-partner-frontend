@@ -1,0 +1,14 @@
+@import '../../../assets/styles/mixins';
+@import '../../../assets/styles/variables';
+
+.customer-info {
+  li {
+    margin-bottom: 10px;
+
+    span {
+      font-size: 18px;
+      font-weight: bold;
+      margin-right: 5px;
+    }
+  }
+}

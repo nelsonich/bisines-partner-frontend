@@ -1,0 +1,10 @@
+@import '../../../../assets/styles/mixins';
+@import '../../../../assets/styles/variables';
+
+.icon-box {
+  display: flex;
+
+  & > *:not(:first-child) {
+    margin-left: 10px;
+  }
+}

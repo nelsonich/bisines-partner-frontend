@@ -1,0 +1,15 @@
+{
+  "presets": [
+    "@babel/preset-react",
+    [
+      "next/babel",
+      {
+        "preset-env": {},
+        "transform-runtime": {},
+        "styled-jsx": {},
+        "class-properties": {}
+      }
+    ]
+  ],
+  "plugins": ["inline-react-svg"]
+}

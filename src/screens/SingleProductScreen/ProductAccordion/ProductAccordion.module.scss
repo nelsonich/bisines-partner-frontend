@@ -1,0 +1,8 @@
+@import '../../../assets/styles/mixins';
+@import '../../../assets/styles/variables';
+
+.accordion-box {
+  background-color: $color-primary !important;
+  box-shadow: unset;
+  color: $color-white !important;
+}

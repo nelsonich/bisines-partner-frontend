@@ -1,0 +1,7 @@
+@import '../../assets/styles/mixins';
+@import '../../assets/styles/variables';
+
+p.error-text {
+  color: $color-warning;
+  font-weight: bold;
+}

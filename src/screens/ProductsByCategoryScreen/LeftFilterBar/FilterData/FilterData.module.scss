@@ -1,0 +1,41 @@
+@import '../../../../assets/styles/mixins';
+@import '../../../../assets/styles/variables';
+
+.processor {
+  h6 {
+    font-size: 13px;
+    font-family: MontserratBold;
+    @include responsive-mobile {
+      margin: 0 !important;
+    }
+  }
+  margin-top: 5px;
+  border-bottom: 1px solid #eee;
+  border-radius: 3px;
+  color: $color-tertiary;
+  border-bottom: 1px solid $color-tertiary;
+  margin-bottom: 10px;
+}
+
+.cat-h6 {
+  text-transform: uppercase;
+  margin-top: 35px;
+}
+
+.details-button-open {
+  display: inline-block;
+  &::after {
+    content: '\27A4';
+    padding-left: 10px;
+  }
+}
+
+.details-button-close {
+  display: inline-block;
+
+  &::after {
+    content: '\27A4';
+    padding-left: 10px;
+  }
+  transform: rotate(90deg);
+}

@@ -1,0 +1,38 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es6",
+    "lib": ["es2017"],
+    "allowSyntheticDefaultImports": true,
+    "allowJs": true,
+    "jsx": "react",
+    "sourceMap": false,
+    "removeComments": true,
+    "noEmit": true,
+    "isolatedModules": true,
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "moduleResolution": "node",
+    "baseUrl": "./",
+    "paths": {
+      "~apis/*": ["./src/apis/*"],
+      "~assets/*": ["./src/assets/*"],
+      "~bootstrap/*": ["./src/bootstrap/*"],
+      "~constants/*": ["./src/constants/*"],
+      "~components/*": ["./src/components/*"],
+      "~contexts/*": ["./src/contexts/*"],
+      "~hooks/*": ["./src/hooks/*"],
+      "~stores/*": ["./src/stores/*"],
+      "~providers/*": ["./src/providers/*"],
+      "~layouts/*": ["./src/layouts/*"],
+      "~screens/*": ["./src/screens/*"],
+      "~sections/*": ["./src/sections/*"],
+      "~services/*": ["./src/services/*"],
+      "~translations/*": ["./src/translations/*"],
+      "~utils/*": ["./src/utils/*"]
+    }
+  },
+  "exclude": ["node_modules"]
+}

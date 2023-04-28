@@ -1,0 +1,27 @@
+@import '../../../assets/styles/mixins';
+@import '../../../assets/styles/variables';
+
+.list-items {
+  li {
+    line-height: 40px;
+    span {
+      color: $color-black;
+      font-weight: 500;
+    }
+  }
+}
+
+.box-receiver-big {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  text-align: right;
+  @include responsive-tablet {
+    justify-content: flex-start !important;
+    text-align: left !important;
+  }
+  @include responsive-mobile {
+    justify-content: flex-start !important;
+    text-align: left !important;
+  }
+}

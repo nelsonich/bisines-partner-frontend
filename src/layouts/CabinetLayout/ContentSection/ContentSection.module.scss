@@ -1,0 +1,29 @@
+@import '../../../assets/styles/mixins';
+@import '../../../assets/styles/variables';
+
+.cabinet-content-section {
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  box-shadow: 0 2px 5px 0 rgb(33 49 60 / 10%);
+  border-radius: 5px;
+
+  .header {
+    display: flex;
+    align-items: center;
+    padding: 17px 14px;
+    font-size: 28px;
+    border-bottom: 1px solid rgba($color-gray-light, 0.5);
+
+    i {
+      margin-right: 10px;
+      font-size: 23px;
+    }
+
+    h5 {
+      margin: 0;
+    }
+  }
+
+  .body {
+    padding: 15px;
+  }
+}

@@ -1,0 +1,231 @@
+/* stylelint-disable property-no-vendor-prefix */
+
+@use 'sass:math';
+@use 'sass:map';
+
+@import './variables';
+
+@mixin transform($values) {
+  -webkit-transform: $values;
+  -khtml-transform: $values;
+  -moz-transform: $values;
+  -ms-transform: $values;
+  -o-transform: $values;
+  transform: $values;
+}
+
+@mixin transform-origin($values...) {
+  -webkit-transform-origin: $values;
+  -khtml-transform-origin: $values;
+  -moz-transform-origin: $values;
+  -ms-transform-origin: $values;
+  -o-transform-origin: $values;
+  transform-origin: $values;
+}
+
+@mixin box-sizing($values...) {
+  -webkit-box-sizing: $values;
+  -khtml-box-sizing: $values;
+  -moz-box-sizing: $values;
+  -ms-box-sizing: $values;
+  -o-box-sizing: $values;
+  box-sizing: $values;
+}
+
+@mixin box-shadow($values...) {
+  -webkit-box-shadow: $values;
+  -khtml-box-shadow: $values;
+  -moz-box-shadow: $values;
+  -ms-box-shadow: $values;
+  -o-box-shadow: $values;
+  box-shadow: $values;
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-space {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin long-text-dots {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@mixin background-position-center {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@mixin background-position-top {
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@mixin animation-cards {
+  background-size: 100%;
+  transition: background-size 0.35s;
+
+  &:hover {
+    background-size: 120%;
+  }
+}
+
+@mixin transition($values...) {
+  -webkit-transition: $values;
+  -khtml-transition: $values;
+  -moz-transition: $values;
+  -ms-transition: $values;
+  -o-transition: $values;
+  transition: $values;
+}
+
+@mixin transition-transform($values...) {
+  -webkit-transition: -webkit-transform $values;
+  -khtml-transition: -khtml-transform $values;
+  -moz-transition: -moz-transform $values;
+  -ms-transition: -ms-transform $values;
+  -o-transition: -o-transform $values;
+  transition: transform $values;
+}
+
+@mixin filter($values...) {
+  -webkit-filter: $values;
+  -khtml-filter: $values;
+  -moz-filter: $values;
+  -ms-filter: $values;
+  -o-filter: $values;
+  filter: $values;
+}
+
+@mixin backdrop-filter($values...) {
+  -webkit-backdrop-filter: $values;
+  -khtml-backdrop-filter: $values;
+  -moz-backdrop-filter: $values;
+  -ms-backdrop-filter: $values;
+  -o-backdrop-filter: $values;
+  backdrop-filter: $values;
+}
+
+@mixin animation($values...) {
+  -webkit-animation: $values;
+  -khtml-animation: $values;
+  -moz-animation: $values;
+  -ms-animation: $values;
+  -o-animation: $values;
+  animation: $values;
+}
+
+@mixin animation-delay($values...) {
+  -webkit-animation-delay: $values;
+  -khtml-animation-delay: $values;
+  -moz-animation-delay: $values;
+  -ms-animation-delay: $values;
+  -o-animation-delay: $values;
+  animation-delay: $values;
+}
+
+@mixin no-select() {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+@mixin no-appearance {
+  -webkit-appearance: none;
+  -khtml-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+}
+
+@mixin key-frames($name) {
+  /* stylelint-disable-next-line at-rule-no-vendor-prefix */
+  @-webkit-keyframes #{$name} {
+    @content;
+  }
+
+  /* stylelint-disable-next-line at-rule-no-vendor-prefix */
+  @-moz-keyframes #{$name} {
+    @content;
+  }
+
+  /* stylelint-disable-next-line at-rule-no-vendor-prefix */
+  @-ms-keyframes #{$name} {
+    @content;
+  }
+
+  /* stylelint-disable-next-line at-rule-no-vendor-prefix */
+  @-o-keyframes #{$name} {
+    @content;
+  }
+
+  /* stylelint-disable-next-line at-rule-no-vendor-prefix */
+  @keyframes #{$name} {
+    @content;
+  }
+}
+
+@mixin responsive-range($size-min, $size-max) {
+  $range-min: map.get($responsive-sizes, $size-min);
+  $range-max: map.get($responsive-sizes, $size-max);
+  $min: map.get($range-min, 'min');
+  $max: map.get($range-max, 'max');
+
+  @media screen and (min-width: $min) and (max-width: $max) {
+    @content;
+  }
+}
+
+@mixin responsive-for($size) {
+  @include responsive-range($size, $size) {
+    @content;
+  }
+}
+
+@mixin responsive-min($size-min) {
+  @include responsive-range($size-min, 'xxl') {
+    @content;
+  }
+}
+
+@mixin responsive-max($size-max) {
+  @include responsive-range('xxs', $size-max) {
+    @content;
+  }
+}
+
+@mixin responsive-desktop() {
+  @include responsive-range(
+    $screen-desktop-min-name,
+    $screen-desktop-max-name
+  ) {
+    @content;
+  }
+}
+
+@mixin responsive-tablet() {
+  @include responsive-range($screen-tablet-min-name, $screen-tablet-max-name) {
+    @content;
+  }
+}
+
+@mixin responsive-mobile() {
+  @include responsive-range($screen-mobile-min-name, $screen-mobile-max-name) {
+    @content;
+  }
+}

@@ -1,0 +1,38 @@
+@import '../../assets/styles/mixins';
+@import '../../assets/styles/variables';
+
+.main-box {
+  min-height: 800px;
+  background-image: url('../../assets/images/pages/auth/background.jpg');
+
+  @include background-position-center();
+
+  @include responsive-mobile {
+    min-height: 500px;
+    padding: 15px !important;
+  }
+}
+
+.title {
+  text-transform: uppercase;
+  text-align: center;
+  font-family: Oswald;
+  @include responsive-mobile {
+    font-size: 25px !important;
+  }
+}
+
+.card-background-image {
+  background-color: $color-primary-transparent-50;
+  border: none;
+
+  > div {
+    @include responsive-mobile {
+      padding: 12px !important;
+    }
+  }
+}
+
+.success {
+  color: green;
+}

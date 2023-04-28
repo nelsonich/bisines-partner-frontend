@@ -1,0 +1,18 @@
+@import '../../../../../assets/styles/mixins';
+@import '../../../../../assets/styles/variables';
+
+.product-category-names {
+  font-size: 14px;
+}
+
+.input-styles {
+  &:focus {
+    box-shadow: none !important;
+    border-color: $color-tertiary;
+  }
+
+  &:checked {
+    background-color: $color-tertiary;
+    border-color: $color-tertiary;
+  }
+}

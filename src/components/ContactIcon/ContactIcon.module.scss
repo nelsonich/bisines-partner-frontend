@@ -1,0 +1,122 @@
+@import '../../assets/styles/mixins';
+@import '../../assets/styles/variables';
+
+.contact-icon {
+  a {
+    display: flex;
+    align-items: center;
+
+    span {
+      &.icon {
+        display: inline-block;
+        border: 1px solid;
+        height: 40px;
+        width: 40px;
+        border-radius: $border-radius;
+        @include flex-center;
+        @include transition(border-color 0.25s);
+
+        svg {
+          @include transition(border-color 0.25s);
+        }
+      }
+
+      &.text {
+        margin-left: 15px;
+        @include transition(color 0.25s);
+      }
+    }
+  }
+
+  &.mode-light a {
+    span {
+      &.icon {
+        border-color: $color-gray-light;
+        svg {
+          color: $color-gray-light;
+        }
+      }
+      &.text {
+        color: $color-gray-light;
+      }
+    }
+
+    &:hover span {
+      &.icon {
+        border-color: $color-black;
+        svg {
+          color: $color-black;
+        }
+      }
+      &.text {
+        color: $color-black;
+      }
+    }
+  }
+  &.mode-dark a {
+    span {
+      &.icon {
+        border-color: $color-gray-light;
+        svg {
+          color: $color-gray-light;
+        }
+      }
+      &.text {
+        color: $color-gray-light;
+      }
+    }
+
+    &:hover span {
+      &.icon {
+        border-color: $color-white;
+        svg {
+          color: $color-white;
+        }
+      }
+      &.text {
+        color: $color-white;
+      }
+    }
+  }
+  &.mode-primary a {
+    span {
+      &.icon {
+        border-color: $color-tertiary;
+        background-color: $color-tertiary;
+        svg {
+          color: $color-white;
+        }
+      }
+      &.text {
+        color: $color-gray-dark;
+      }
+    }
+  }
+
+  &.size-normal a span {
+    &.icon {
+      height: 34px;
+      width: 34px;
+      svg {
+        height: 16px;
+        width: 16px;
+      }
+    }
+    &.text {
+      margin-left: 15px;
+    }
+  }
+  &.size-compact a span {
+    &.icon {
+      height: 22px;
+      width: 22px;
+      svg {
+        height: 12px;
+        width: 12px;
+      }
+    }
+    &.text {
+      margin-left: 5px;
+    }
+  }
+}

@@ -1,0 +1,30 @@
+@import '../../assets/styles/mixins';
+@import '../../assets/styles/variables';
+
+.big-box-shipping {
+  min-height: 950px;
+}
+
+.title-costs {
+  h4 {
+    padding: 30px;
+    font-family: MontserratBold;
+    font-weight: bold;
+    text-align: center;
+  }
+  p {
+    text-align: left;
+    font-weight: bold;
+  }
+  @include responsive-mobile {
+    p {
+      text-align: center;
+      font-size: 12px;
+    }
+    h4 {
+      padding: 10px;
+      text-align: center;
+      font-size: 15px;
+    }
+  }
+}

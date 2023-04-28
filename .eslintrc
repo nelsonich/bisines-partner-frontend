@@ -1,0 +1,118 @@
+{
+  "root": true,
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true
+  },
+  "parserOptions": {
+    "parser": "@babel/eslint-parser",
+    "ecmaVersion": 2018,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "project": ["./jsconfig.json"]
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+  "plugins": ["react", "import", "unicorn", "eslint-plugin-no-inline-styles"],
+  "extends": [
+    "next/core-web-vitals",
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
+    "prettier",
+    "plugin:prettier/recommended"
+  ],
+  "rules": {
+    "eslint-comments/no-unused-disable": "off"
+  },
+  "overrides": [
+    {
+      "files": ["*.js", "*.jsx"],
+      "extends": [],
+      "parserOptions": {
+        "project": ["./jsconfig.json"]
+      },
+      "rules": {
+        "yoda": "warn",
+        "prettier/prettier": "warn",
+        "import/no-anonymous-default-export": "error",
+        "default-case": "off",
+        "no-loop-func": "warn",
+        "no-extra-boolean-cast": "warn",
+        "no-console": "warn",
+        "no-useless-escape": "warn",
+        "eqeqeq": "error",
+        "no-fallthrough": "warn",
+        "semi": "error",
+        "curly": "error",
+        "no-empty-pattern": "off",
+        "no-eval": "off",
+        "no-self-assign": "error",
+        "no-self-compare": "error",
+        "no-debugger": "warn",
+        "no-constant-condition": "warn",
+        "unicorn/numeric-separators-style": "warn",
+        "no-inline-styles/no-inline-styles": "error",
+        "no-duplicate-imports": "error",
+        "react-hooks/exhaustive-deps": "off",
+        "react/jsx-key": "error",
+        "react/jsx-boolean-value": ["error", "always"],
+        "react/function-component-definition": [
+          "error",
+          {
+            "namedComponents": "function-declaration",
+            "unnamedComponents": "function-expression"
+          }
+        ],
+        // "react/jsx-max-props-per-line": [
+        //   "error",
+        //   {
+        //     "maximum": 1,
+        //     "when": "always"
+        //   }
+        // ],
+        "react/prop-types": "off",
+        "react/self-closing-comp": [
+          "error",
+          {
+            "component": true,
+            "html": true
+          }
+        ],
+        "react/jsx-uses-react": "error",
+        "react/react-in-jsx-scope": "error",
+        "jsx-a11y/alt-text": "off",
+        "ban-ts-comment": "off",
+        "no-unsafe-member-access": "off",
+        "no-empty-interface": "off",
+        "no-unsafe-call": "off",
+        "no-unused-vars": [
+          "error",
+          {
+            "argsIgnorePattern": "^(styles|pageProps|props|e|event|context|_)$"
+          }
+        ],
+        "no-unsafe-assignment": "off",
+        "no-floating-promises": "off",
+        "no-unsafe-return": "off",
+        "explicit-module-boundary-types": "off",
+        "no-inferrable-types": "off",
+        "no-misused-promises": "off",
+        "no-empty-function": "off",
+        "restrict-plus-operands": "off",
+        "require-await": "off",
+        "restrict-template-expressions": "off",
+        "ban-types": "off",
+        "unbound-method": "off",
+        "global-require": "error",
+        "@next/next/no-img-element": "off"
+      }
+    }
+  ]
+}

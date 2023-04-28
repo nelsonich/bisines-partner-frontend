@@ -1,0 +1,160 @@
+/* stylelint-disable property-no-vendor-prefix */
+
+/* mixins and variables */
+@import 'variables';
+@import 'mixins';
+
+// google fonts
+@import url('https://fonts.googleapis.com/css2?display=swap&family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900');
+@import url('https://fonts.googleapis.com/css2?display=swap&family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700');
+@import url('https://fonts.googleapis.com/css2?display=swap&family=Noto+Sans+Armenian:wght@100;200;300;400;500;600;700;800;900');
+@import url('https://fonts.googleapis.com/css2?display=swap&family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900');
+@import url('https://fonts.googleapis.com/css2?display=swap&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900');
+@import url('https://fonts.googleapis.com/css2?display=swap&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800');
+@import url('https://fonts.googleapis.com/css2?display=swap&family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&family=Oswald:wght@200;300;400;500;600;700');
+
+// local fonts
+@import '../fonts/fontawesome/include';
+@import '../fonts/flaticon/include';
+
+// libraries
+@import './libraries/bootstrap.scss';
+@import './libraries/react-phone-number-input.scss';
+@import './libraries/react-image-gallery.scss';
+
+// basic style
+html,
+body {
+  font-family: 'Jost', 'Poppins', 'Nunito Sans', 'Noto Sans',
+    'Noto Sans Armenian', system-ui, -apple-system, BlinkMacSystemFont,
+    'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',
+    sans-serif;
+  background: $color-white !important;
+  margin: 0;
+  padding: 0 !important;
+  overflow: auto !important;
+
+  * {
+    @include box-sizing(border-box);
+    @include transition(all $animation-duration $animation-style);
+  }
+}
+
+label {
+  width: 100%;
+}
+
+a,
+a:hover,
+a:active {
+  text-decoration: none !important;
+}
+
+button,
+section {
+  outline: none !important;
+}
+
+::selection {
+  background: rgba($color-green, 0.2);
+}
+
+select {
+  background-image: url('data:image/svg+xml;utf8,<?xml version="1.0"?><svg height="48" viewBox="0 0 48 48" width="48" xmlns="http://www.w3.org/2000/svg"><path d="M33.17 17.17l-9.17 9.17-9.17-9.17-2.83 2.83 12 12 12-12z"/><path d="M0 0h48v48h-48z" fill="none"/></svg>');
+  background-repeat: no-repeat;
+  background-color: $color-white;
+  background-position: center right 7px;
+  background-size: 19px;
+  @include no-appearance;
+}
+
+ul {
+  list-style: none !important;
+  padding: 0 !important;
+}
+
+button {
+  border: none;
+}
+
+*::-webkit-scrollbar,
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+*::-webkit-scrollbar-track,
+::-webkit-scrollbar-track {
+  background: $color-gray-dark;
+}
+
+*::-webkit-scrollbar-thumb,
+::-webkit-scrollbar-thumb {
+  border-radius: $border-radius;
+  background: rgba($color-secondary, 0.75);
+}
+
+*::-webkit-scrollbar-thumb:hover,
+::-webkit-scrollbar-thumb:hover {
+  background: rgba($color-primary-transparent, 0.5);
+}
+
+// swiper
+.swiper-pagination {
+  bottom: -5px !important;
+}
+
+.swiper-pagination-bullet {
+  background-color: $color-primary !important;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: $color-primary !important;
+}
+
+// plyr
+:root {
+  --plyr-color-main: #{$color-green};
+}
+
+// map
+.map-container {
+  width: 100% !important;
+  height: 600px !important;
+  border-radius: $border-radius !important;
+}
+
+// react-image-gallery
+.image-gallery {
+  width: 100%;
+  height: auto;
+}
+
+.image-gallery-slide img {
+  width: 100%;
+  height: auto;
+  max-height: 80vh;
+  object-fit: cover;
+  overflow: hidden;
+  object-position: center center;
+}
+
+.fullscreen .image-gallery-slide img {
+  max-height: 100vh;
+}
+.image-gallery-image {
+  width: 100%;
+  object-fit: cover !important;
+  height: 600px !important;
+  @include responsive-mobile {
+    height: 300px !important;
+  }
+}
+.image-gallery-thumbnail-image {
+  object-fit: cover !important;
+  height: 80px !important;
+}
+::-webkit-slider-thumb {
+  background: $color-primary !important;
+}

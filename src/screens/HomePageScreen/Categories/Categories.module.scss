@@ -1,0 +1,11 @@
+@import '../../../assets/styles/mixins';
+@import '../../../assets/styles/variables';
+
+.home-cat-main {
+  width: 100%;
+  min-height: 350px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  background-color: $color-white;
+}

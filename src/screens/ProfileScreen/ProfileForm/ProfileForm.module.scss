@@ -1,0 +1,19 @@
+@import '../../../assets/styles/mixins';
+@import '../../../assets/styles/variables';
+
+p.error-text {
+  color: $color-warning;
+  font-weight: bold;
+  margin: 0;
+}
+
+.success {
+  color: green;
+}
+
+.not-changeable-section {
+  padding: 20px;
+  background-color: #eaeaea;
+  margin-top: 5px;
+  border-radius: 3px;
+}

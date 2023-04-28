@@ -1,0 +1,57 @@
+@import '../../assets/styles/mixins';
+@import '../../assets/styles/variables';
+
+.thank-you-box {
+  h2 {
+    color: #0bc377 !important;
+    font-weight: bold;
+  }
+
+  @include responsive-mobile {
+    padding: 0 !important;
+    margin-top: 10px !important;
+  }
+}
+.table-padding {
+  table {
+    td,
+    th {
+      padding: 5px;
+    }
+    @include responsive-mobile {
+      input {
+        width: 40px !important;
+      }
+    }
+  }
+}
+
+.image-thank-you-success {
+  width: 60px;
+}
+
+.tr-font {
+  background-color: $color-primary-transparent-50;
+  td {
+    font-size: 15px;
+    font-weight: bold !important;
+  }
+}
+.chaacked-icon-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include responsive-mobile {
+    > div {
+      img {
+        width: 40px;
+      }
+    }
+  }
+
+  h2 {
+    @include responsive-mobile {
+      font-size: 13px;
+    }
+  }
+}

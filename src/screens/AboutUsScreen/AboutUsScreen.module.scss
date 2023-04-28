@@ -1,0 +1,31 @@
+@import '../../assets/styles/mixins';
+@import '../../assets/styles/variables';
+
+.box-about-background {
+  width: 100%;
+  min-height: 400px;
+  background-image: url('https://images.unsplash.com/photo-1602615576820-ea14cf3e476a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80');
+  @include background-position-center();
+  h1 {
+    font-family: Oswald;
+    font-size: 50px;
+  }
+  a {
+    color: $color-black;
+  }
+}
+.bottom-background {
+  width: 100%;
+  height: 20px;
+  background-image: url('../../assets/images/pages/about-us-page/breadcrumb-shape-2.png');
+  @include background-position-center();
+}
+.top-background {
+  width: 100%;
+  height: 20px;
+  background-image: url('../../assets/images/pages/about-us-page/breadcrumb-shape-1.png');
+  @include background-position-center();
+}
+.flex-about {
+  height: 400px;
+}

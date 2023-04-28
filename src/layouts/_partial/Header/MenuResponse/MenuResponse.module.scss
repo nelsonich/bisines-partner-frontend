@@ -1,0 +1,22 @@
+@import '../../../../assets/styles/mixins';
+@import '../../../../assets/styles/variables';
+
+.ovcanvas-design {
+  border: none !important;
+  width: 43%;
+  @include responsive-mobile {
+    width: 100%;
+  }
+}
+
+.toggler-icon {
+  border: none !important;
+  width: 55px;
+  height: 40px;
+  background-color: transparent;
+}
+.response-menu-bisines-partner {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 17px;
+}

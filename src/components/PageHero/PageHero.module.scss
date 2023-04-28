@@ -1,0 +1,39 @@
+@import '../../assets/styles/mixins';
+@import '../../assets/styles/variables';
+
+.box-about-background {
+  width: 100%;
+  min-height: 400px;
+  @include responsive-mobile {
+    min-height: 220px !important;
+  }
+  @include background-position-center();
+  h1 {
+    font-family: Oswald;
+    font-size: 50px;
+    @include responsive-mobile {
+      font-size: 30px;
+    }
+  }
+  a {
+    color: $color-black;
+  }
+}
+.bottom-background {
+  width: 100%;
+  height: 20px;
+  background-image: url('../../assets/images/pages/about-us-page/breadcrumb-shape-2.png');
+  @include background-position-center();
+}
+.top-background {
+  width: 100%;
+  height: 20px;
+  background-image: url('../../assets/images/pages/about-us-page/breadcrumb-shape-1.png');
+  @include background-position-center();
+}
+.flex-about {
+  height: 400px;
+  @include responsive-mobile {
+    height: 220px !important;
+  }
+}

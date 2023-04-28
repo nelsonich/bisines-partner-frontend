@@ -1,0 +1,11 @@
+@import '../../../assets/styles/mixins';
+@import '../../../assets/styles/variables';
+
+.active-link {
+  color: $color-primary !important;
+
+  &::before {
+    content: '\273C';
+    padding-right: 10px;
+  }
+}

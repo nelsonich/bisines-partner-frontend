@@ -1,0 +1,110 @@
+@import '../../assets/styles/mixins';
+@import '../../assets/styles/variables';
+
+.card-box {
+  min-width: 15rem;
+  width: 100%;
+  height: 320px;
+  @include background-position-center();
+  @include animation-cards();
+  @include responsive-mobile {
+    width: 300px;
+  }
+  @include responsive-tablet {
+    width: 300px;
+  }
+}
+
+.position-big-box {
+  position: relative;
+  margin-top: 50px;
+  margin-bottom: 22px;
+  box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.16);
+}
+
+.box-position {
+  width: calc(100% - 40px) !important;
+  height: 130px;
+  background-color: #ffff;
+  position: absolute;
+  top: 240px;
+  margin: auto;
+  border: none !important;
+  box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.16);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Oswald;
+
+  h4 {
+    color: $color-black;
+    text-decoration: none;
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+
+  p {
+    font-size: 14px;
+    color: $color-black;
+    margin-bottom: 5px;
+
+    span {
+      color: $color-primary;
+    }
+  }
+
+  @include responsive-mobile {
+    width: 80% !important;
+  }
+  @include responsive-tablet {
+    width: 17rem;
+  }
+}
+
+.big-box-flowers {
+  min-height: 500px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-bottom: 100px;
+  @include responsive-tablet {
+    justify-content: center !important;
+  }
+  @include responsive-mobile {
+    justify-content: center !important;
+  }
+}
+
+.action-buttons {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 10px;
+
+  > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: $border-radius;
+    border: 1px solid $color-gray-light;
+    font-size: 20px;
+    cursor: pointer;
+    @include transition(border-color 0.25s !important);
+
+    svg {
+      color: $color-gray-light;
+      @include transition(color 0.25s, border-color 0.25s !important);
+    }
+
+    &:hover {
+      border-color: $color-primary;
+      svg {
+        color: $color-primary;
+      }
+    }
+  }
+}

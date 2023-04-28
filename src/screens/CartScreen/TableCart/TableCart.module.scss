@@ -1,0 +1,144 @@
+@import '../../../assets/styles/mixins';
+@import '../../../assets/styles/variables';
+
+.table-box {
+  td,
+  th {
+    padding: 25px;
+    @include responsive-mobile {
+      width: 50px !important;
+      font-size: 7px;
+      padding: 5px;
+      text-align: center;
+    }
+    @include responsive-tablet {
+      width: 50px !important;
+      font-size: 10px;
+      padding: 10px;
+      text-align: center;
+    }
+  }
+}
+.product-image-th {
+  @include responsive-mobile {
+    display: none;
+  }
+}
+
+.tr-font-response {
+  > div {
+    @include responsive-mobile {
+      height: 40px;
+      p {
+        width: 100%;
+        text-align: center !important;
+      }
+    }
+  }
+
+  img {
+    width: 80px;
+    height: 80px;
+    border-radius: $border-radius;
+    @include responsive-mobile {
+      width: 100% !important;
+      display: block !important;
+    }
+    @include responsive-tablet {
+      display: none;
+    }
+    @include responsive-desktop {
+      display: none;
+    }
+  }
+}
+.tr-font {
+  font-size: 13px !important;
+  font-family: MontserratBold;
+  font-weight: bold;
+  img {
+    width: 80px;
+    height: 80px;
+    border-radius: $border-radius;
+    @include responsive-mobile {
+      display: none;
+    }
+  }
+  svg {
+    cursor: pointer;
+  }
+  th {
+    text-align: center !important;
+  }
+}
+
+.thead-tr {
+  th {
+    background-color: $color-primary-transparent-50;
+    padding: 20px !important;
+    @include responsive-mobile {
+      padding: 5px !important;
+    }
+  }
+}
+
+.text-align-center {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.product-name-responsive {
+  @include responsive-mobile {
+    display: none;
+  }
+}
+.product-price-responsive {
+  @include responsive-mobile {
+    display: block;
+    margin-top: 10px;
+  }
+  @include responsive-tablet {
+    display: none;
+  }
+  @include responsive-desktop {
+    display: none;
+  }
+}
+
+.product-subtotal-responsive {
+  @include responsive-tablet {
+    display: none;
+  }
+  @include responsive-desktop {
+    display: none;
+  }
+}
+.price-none {
+  @include responsive-mobile {
+    display: none;
+  }
+}
+
+.icon-x-responsive {
+  @include responsive-tablet {
+    margin-left: 10px !important;
+  }
+  @include responsive-mobile {
+    margin: 0 !important;
+  }
+}
+.icon-x-responsive-mobile {
+  @include responsive-desktop {
+    display: none !important;
+  }
+  @include responsive-tablet {
+    display: none !important;
+  }
+  @include responsive-mobile {
+    margin: 0 !important;
+    margin-top: 5px !important;
+  }
+}

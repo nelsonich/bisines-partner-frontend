@@ -1,0 +1,65 @@
+@import '../../../assets/styles/mixins';
+@import '../../../assets/styles/variables';
+
+.home-flowers-box {
+  min-height: 650px;
+  background-image: url('https://images.unsplash.com/photo-1602615576820-ea14cf3e476a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80');
+  @include background-position-center();
+
+  @include responsive-mobile {
+    min-height: 250px;
+  }
+}
+.flower-layer-background {
+  width: 100%;
+  min-height: 650px;
+  background-color: $color-layer;
+  @include responsive-mobile {
+    min-height: 250px;
+  }
+}
+.home-title > h1 {
+  font-family: Oswald;
+  padding-top: 100px;
+  width: 370px;
+  color: $color-primary;
+  font-size: 80px;
+  line-height: 90px;
+  @include responsive-tablet {
+    font-size: 100px;
+  }
+  @include responsive-mobile {
+    font-size: 23px;
+    width: 100%;
+    text-align: center;
+    line-height: 60px;
+    padding-top: 50px;
+  }
+}
+
+.home-flowers-text > p {
+  color: #a7a7a7;
+  font-size: 18px;
+  width: 500px;
+  margin-top: 20px;
+  @include responsive-mobile {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.buttons {
+  > a {
+    @include responsive-mobile {
+      button {
+        width: 130px !important;
+        height: 40px !important;
+        font-size: 13px !important;
+      }
+    }
+  }
+  @include responsive-mobile {
+    width: 100%;
+    text-align: center;
+  }
+}

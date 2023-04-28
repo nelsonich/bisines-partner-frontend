@@ -1,0 +1,36 @@
+@import '../../assets/styles/variables';
+@import '../../assets/styles/mixins';
+
+.top-box-background-image {
+  width: 100%;
+  min-height: 1000px;
+  background-color: $color-white;
+
+  @include responsive-mobile {
+    min-height: 800px;
+  }
+}
+
+.card-background-image {
+  background-color: $color-white;
+  > div {
+    @include responsive-mobile {
+      padding: 7px !important;
+    }
+  }
+}
+.title-contact {
+  font-family: Oswald;
+}
+.button-text {
+}
+
+.form-font-size {
+  div {
+    label {
+      @include responsive-mobile {
+        font-size: 12px !important;
+      }
+    }
+  }
+}

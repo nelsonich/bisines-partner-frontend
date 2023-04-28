@@ -1,0 +1,41 @@
+@import '../../assets/styles/mixins';
+@import '../../assets/styles/variables';
+
+.cart-box {
+  height: 200px;
+
+  div,
+  .card-img-top {
+    @include background-position-center();
+    background-size: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+
+  &:hover > .card-img-top {
+    background-size: 115%;
+  }
+}
+
+.text-card {
+  font-family: Oswald;
+  font-size: 18px;
+  color: rgb(31, 30, 32);
+  text-align: center;
+  font-weight: bold;
+}
+
+.layer-title {
+  min-width: 120px;
+  min-height: 70px;
+  max-width: 160px;
+  max-height: 70px;
+  padding-left: 15px;
+  padding-right: 15px;
+  background-color: $color-primary-transparent-50;
+  display: flex;
+  justify-content: center !important;
+  align-items: center !important;
+  margin: 5px;
+}
